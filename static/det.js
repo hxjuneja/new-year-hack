@@ -73,7 +73,7 @@ $("#white").click(function(){
     dcolor = "white";
     $('#header').text("To Reveal the message use white color OR choose other colors from the dropdown");
     $(".alert").html('<button id="a" type="button" class="close">×</button>'+
-                      'Use white color cloth or paper to see the message.').alert();
+                      'Use white color cloth or paper and place it infront of the camera.').alert();
     $(".alert").show();
 });
 
@@ -81,14 +81,14 @@ $("#green").click(function(){
     dcolor = "green";
     $('#header').text("To Reveal the message use green color OR choose other colors from the dropdown");
     $(".alert").html('<button id="a" type="button" class="close">×</button>'+
-                      'Use green color cloth or paper to see the message.').alert();
+                      'Use green color cloth or paper and place it infront of the camera.').alert();
     $(".alert").show();
 });
 $("#black").click(function(){
     dcolor = "black";
     $('#header').text("To Reveal the message use black color OR choose other colors from the dropdown");
     $(".alert").html('<button id="a" type="button" class="close" >×</button>'+
-                      'Use black color cloth or paper to see the message.').alert();
+                      'Use black color cloth or paper and place it infront of the camera.').alert();
     $(".alert").show();
 });
 
