@@ -18,10 +18,12 @@ if (navigator.getUserMedia) {
         navigator.webkitGetUserMedia({audio:false, video:true}, function(stream) {
         video.src = window.webkitURL.createObjectURL(stream);
         update();
+        $(".alert").show();
     }, webcamError);
 } else {
     //video.src = 'video.webm'; // fallback.
 }
+
 
 var canvas = $("#tut")[0];
 $(canvas).delay(600).fadeIn();
@@ -34,6 +36,7 @@ contextSource.scale(-1, 1);
 var set = false;
 var revealed = Object.create(null);
 dcolor = "green";
+
 
 function update(){
 
@@ -69,15 +72,33 @@ function findcolor(){
 $("#white").click(function(){
     dcolor = "white";
     $('#header').text("To Reveal the message use white color OR choose other colors from the dropdown");
+    $(".alert").html('<button id="a" type="button" class="close">×</button>'+
+                      'Use white color cloth or paper to see the message.').alert();
+    $(".alert").show();
 });
 
 $("#green").click(function(){
     dcolor = "green";
     $('#header').text("To Reveal the message use green color OR choose other colors from the dropdown");
+    $(".alert").html('<button id="a" type="button" class="close">×</button>'+
+                      'Use green color cloth or paper to see the message.').alert();
+    $(".alert").show();
 });
 $("#black").click(function(){
     dcolor = "black";
     $('#header').text("To Reveal the message use black color OR choose other colors from the dropdown");
+    $(".alert").html('<button id="a" type="button" class="close" >×</button>'+
+                      'Use black color cloth or paper to see the message.').alert();
+    $(".alert").show();
+});
+
+$("#a").click(function(){
+    console.log("s");
+    $(".alert").hide();
+});
+
+$(".alert").click(function(){
+    $(this).hide();
 });
 
 //============= Helper functions ============================
