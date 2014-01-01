@@ -1,0 +1,46 @@
+html,
+body {
+  height: 100%;
+
+}
+
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#webcam {
+        display: none;
+}
+
+#canvas-source {
+
+        position: relative;
+        left: 310px;
+        bottom: 485px;
+        width: 30%;
+}
+
+#tut {
+    position: relative;
+    left: 310px;
+    top: 51px;
+    width: 110%;
+    
+}
+
+#footer{
+    position: relative;
+    top:50px;
+}
+
+
