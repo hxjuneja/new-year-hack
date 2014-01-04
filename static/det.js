@@ -13,6 +13,8 @@ var video = $('#webcam')[0];
 if (navigator.getUserMedia) {
     navigator.getUserMedia({audio: false, video: true}, function(stream) {
         video.src = stream;
+        update();
+        $(".alert").show();
     }, webcamError);
 } else if (navigator.webkitGetUserMedia) {
         navigator.webkitGetUserMedia({audio:false, video:true}, function(stream) {
