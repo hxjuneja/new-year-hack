@@ -1,6 +1,8 @@
 var fs = require("fs");
 var express = require("express");
 var app = express();
+var bodyParser = require('body-parser');
+app.use(bodyParser());
 
 function render_html(res, file){
 
@@ -23,7 +25,6 @@ app.get("/index", function(req, res){
 });
 
 
-app.use(express.bodyParser());
 app.use('/static', express.static(__dirname + '/static'));
 app.use('/html', express.static(__dirname + '/html'));
 app.use('/samples', express.static(__dirname + '/samples'));
